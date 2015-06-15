@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>LogonServlet</servlet-name>
+        <servlet-class>servlets.LogonServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InventoryDisplayServlet</servlet-name>
+        <servlet-class>servlets.InventoryDisplayServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateRecordServlet</servlet-name>
+        <servlet-class>servlets.UpdateRecordServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InventoryChangedServlet</servlet-name>
+        <servlet-class>servlets.InventoryChangedServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogonServlet</servlet-name>
+        <url-pattern>/Logon</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryDisplayServlet</servlet-name>
+        <url-pattern>/InventoryDisplay</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateRecordServlet</servlet-name>
+        <url-pattern>/UpdateRecord</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InventoryChangedServlet</servlet-name>
+        <url-pattern>/InventoryChanged</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>Logon.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
